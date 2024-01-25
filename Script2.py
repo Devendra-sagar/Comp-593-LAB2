@@ -1,8 +1,8 @@
 def main():
 # TODO: Step 2 - Create a complex data structure
     about_me = {
-                'full_name' : 'Deven Sagar', 
-                'student_id' : 6544684,
+                'full_name' : 'Devendra Sagar', 
+                'student_id' : 123456789,
                 'pizza_toppings' : [
                     'bacon' ,
                     'Cheese' ,
@@ -29,16 +29,17 @@ def print_student_name_and_id(data_struct):
     student_id = data_struct['student_id']
 
     print(f'My name is {full_name}, but you call me sir {first_name}.')
-
     print(f'My Id is {student_id}.')
 
     return
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
 def add_pizza_toppings(about_me, toppings):
-    
-    return
+    toppings = input("Enter the name of new toppings to add")
+    about_me['pizza_toppings'].append({toppings})
 
+    add_pizza_toppings(about_me,toppings)
+    return
 # TODO: Step 6 - Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
     return
