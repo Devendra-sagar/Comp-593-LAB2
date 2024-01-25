@@ -34,12 +34,11 @@ def print_student_name_and_id(data_struct):
     return
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
-def add_pizza_toppings(about_me, toppings):
-    toppings = input("Enter the name of new toppings to add")
-    about_me['pizza_toppings'].append({toppings})
-
-    add_pizza_toppings(about_me,toppings)
-    return
+def add_pizza_toppings(pizza, toppings):
+    toppings = input("Enter name of topping")
+    pizza['pizza_toppings'].extend(toppings)
+    pizza['pizza_toppings'] = sorted([toppings.lower() for toppings in pizza["pizza_toppings"]])
+    return pizza
 # TODO: Step 6 - Function that prints bullet list of pizza toppings
 def print_pizza_toppings(about_me):
     return
